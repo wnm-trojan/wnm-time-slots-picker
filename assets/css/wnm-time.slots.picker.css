@@ -1,0 +1,80 @@
+.wnm-time-frame{
+    max-width: 300px;
+    padding: 0.6rem 1rem;
+    font-size: 0.875rem;
+    /* height: calc(1.3125rem + 1.2rem + 2px); */
+    border: 1px solid #e2e5ec;
+    color: #898b92;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    text-align: center;
+}
+
+.wnm-time-frame h6{
+    font-size: 14px;
+    color: #898b92;
+}
+
+.wnm-times-list{
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -ms-flex-direction: row;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    max-width: 240px;
+    padding: 0;
+    margin: auto;
+    list-style-type: none;
+}
+
+.wnm-times-list .wnm-time-slots{
+    width: 25%;
+    height: 40px;
+    padding: 1px 0;
+    font-size: 16px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.wnm-times-list .wnm-time-slots input{
+    width: 100%;
+    height: 100%;
+    margin: 0 1px 1px 0;
+    background-color: #fff;
+    border-color: #edecec;
+    border-style: solid;
+    border-width: 1px 1px 1px 1px;
+    border-radius: 3px;
+    font-size: 12px;
+    color: #666;
+    line-height: 15px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: default;
+}
+
+.wnm-times-list .wnm-time-slots input.active:hover{
+    background-color: #cedded;
+    cursor: pointer;
+}
+
+.wnm-times-list .wnm-time-slots input.disabled{
+    background-color: #e9e9e9;
+}
+
+.wnm-times-list .wnm-time-slots input.selected{
+    background-color: #15458d;
+    color: #ffffff;
+    cursor: default;
+}

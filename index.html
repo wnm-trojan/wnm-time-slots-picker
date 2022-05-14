@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<title>jQuer Datepicker Demo</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+		<link rel="stylesheet" href="assets/css/wnm-time.slots.picker.css">
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	</head>
+	<body>
+ 
+		<div class="container text-center">
+			<h2>WNM Time Slots Picker</h2>
+			<br>
+			<form>
+				<div class="form-group row">
+					<label class="col-md-3 col-form-label">Event Start</label>
+					<div class="col-md-9">
+						<input type="text" class="form-control" id="event_start" name="event_start"
+						placeholder="Event Start Datetime" onchange="wnmLoadTimeSlot(this)">
+						<input type="text" class="form-control" id="event_start_time" name="event_start_time">
+					</div>
+					<label class="col-md-3 col-form-label"></label>
+					<div class="col-md-9 mt-2">
+						<div id="wnm-load-time-slots">
+							<div class="wnm-time-frame">
+								<h6>Select an appointment</h6>
+							</div>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+		
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				var dates = ["26-03-2022", "27-03-2022", "30-03-2022"];
+		
+				function disableDates(date) {
+					var string = $.datepicker.formatDate('dd-mm-yy', date);
+					return [dates.indexOf(string) == -1];
+				}
+		
+				$( "#event_start" ).datepicker({
+					minDate: 0, //restrict user to choose previous date
+					beforeShowDay: disableDates
+				});
+			});
+		</script>
+		<script src="assets/js/wnm-time.slots.picker.js"></script>
+	</body>
+</html>
